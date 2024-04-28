@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#000000"
+  color_dark: "#FFFFFF"
+  image: assets/logos/UNIAPP_dark.png
+  image_dark: assets/logos/UNIAPP_light.png
+
+  android_12:
+    color: "#000000"
+    color_dark: "#FFFFFF"
+    image: assets/logos/UNIAPP_dark.png
+    image_dark: assets/logos/UNIAPP_light.png
+
+  web: false
