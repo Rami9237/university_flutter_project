@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:mobile_project/utils/theme/theme.dart';
 
 void main() {
-  runApp(const App());
-}
 
-class App extends StatelessWidget {
-  
   // Todo: Add Widgets Binding
   // Todo: init Local Storage
   // Todo: Await Native Splash
   // Todo: init firebase
   // Todo: init auth
+
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
 
   const App({super.key});
 
