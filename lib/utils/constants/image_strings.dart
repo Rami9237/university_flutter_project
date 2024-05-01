@@ -8,4 +8,5 @@ class TImages {
   static const String accountCreated = "assets/images/account-created.gif";
   static const String googleicon = "assets/icons/google-icon.png";
   static const String onBoardingImage1 = "assets/images/hello.gif";
+  static const String loading = "assets/images/loading.gif";
 }
