@@ -6,14 +6,16 @@ class TTexts {
   static const String dontHaveAccount = "Don't have an account?";
   static const String signUp = "Sign Up";
 
-  static const String onBoardingTitle1 = "Don't miss out on the latest news!";
-  static const String onBoardingTitle2 = "Contribute and create!";
+  static const String onBoardingTitle1 = "Hello and welcome to UNIAPP!";
+  static const String onBoardingTitle2 = "Don't miss out on the latest news!";
+  static const String onBoardingTitle3 = "Contribute and create!";
 
   static const String onBoardingSubtitle1 =
-      "Choose which categories you want to follow and get notified whenever news are being shared";
+      "UNIAPP is a digital university journal that helps you keep up on the latest news posted by teachers and students regarding topics in your university";
   static const String onBoardingSubtitle2 =
+      "Choose which categories you want to follow and get notified whenever news are being shared";
+  static const String onBoardingSubtitle3 =
       "Write your own articles and share them on specific canals! Your articles will be analyzed by our admins and published for other followers to read";
-
   static const String authenticationTitle = "Authentication title";
   static const String authenticationSubTitle =
       "Enter your credentials to proceed";

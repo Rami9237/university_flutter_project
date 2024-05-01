@@ -16,7 +16,6 @@ import 'widgets/onboarding_next_button.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/onboarding_skip.dart';
 
-
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
 
@@ -24,13 +23,12 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(OnBoardingController());
 
-
     return Scaffold(
       body: Stack(
         children: [
           PageView(
             controller: controller.pageController,
-            onPageChanged: controller.updatePageIndicator ,
+            onPageChanged: controller.updatePageIndicator,
             children: [
               OnBoardingPage(
                 key: UniqueKey(), // Use UniqueKey to differentiate instances
@@ -44,18 +42,18 @@ class OnBoardingScreen extends StatelessWidget {
                 title: TTexts.onBoardingTitle2,
                 subTitle: TTexts.onBoardingSubtitle2,
               ),
+              OnBoardingPage(
+                  key: UniqueKey(), // Use UniqueKey to differentiate instances
+                  image: TImages.onBoardingImage3,
+                  title: TTexts.onBoardingTitle3,
+                  subTitle: TTexts.onBoardingSubtitle3)
             ],
           ),
-
           const OnBoardingSkip(),
-
           const OnBoardingNavigation(),
-
           const OnBoardingNextButton()
         ],
       ),
     );
   }
 }
-
-
