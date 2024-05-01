@@ -27,4 +27,32 @@ class TTexts {
   static const String signInHere = "Sign in here";
   static const String rememberMe = "Remember me";
   static const String createAnAccount = "Create an account";
+  static const String orSignInWith = "Or Sign in with";
+  static const String orSignUpWith = "Or Sign up with";
+  static const String policy = "Terms of use";
+  static const String and = "and";
+  static const String iAgreeTo = "I agree to";
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String phoneNumber = "Phone Number";
+  static const String address = "Address";
+  static const String city = "City";
+  static const String country = "Country";
+  static const String postalCode = "Postal Code";
+  static const String dateOfBirth = "Date of Birth";
+  static const String verifyYourEmail = "Verify your email address!";
+  static const String verifyParagraph =
+      "Congratulations! Your account awaits. Verify your email adress to access your dashboard and be part of our community!";
+  static const String accountCreated = "Your account was successfully created!";
+  static const String accountCreatedParagraph = "Glad to have you onboard! 😄";
+  static const String tContinue = "continue";
+  static const String resendEmail = "resend email";
+  static const String forgotPasswordTitle = "Forgot Password";
+  static const String forgotPasswordSubTitle =
+      "Write down the email associated with your account to proceed";
+  static const String submit = "Submit";
+  static const String changePasswordTitle = "Password Reset Email sent";
+  static const String changePasswordSubTitle =
+      "An email was sent to you to reset your password. Follow the next steps there to reset your password";
+  static const String done = "Done";
 }

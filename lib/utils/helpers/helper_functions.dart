@@ -33,30 +33,28 @@ class THelperFunctions {
 
   static void showAlert(String title, String message) {
     showDialog(
-      context: Get.context!,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: Text(message),
-          actions: [
-            TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('OK'))
-          ]
-        );
-      }
-    );
+        context: Get.context!,
+        builder: (BuildContext context) {
+          return AlertDialog(
+              title: Text(title),
+              content: Text(message),
+              actions: [
+                TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text('OK'))
+              ]);
+        });
   }
 
-  static bool isDarkMode(BuildContext context) {
+  static bool isDarkMode(context) {
     return Theme.of(context).brightness == Brightness.dark;
   }
 
-  static double getScreenWidth(BuildContext context) {
-    return MediaQuery.of(context).size.width;
+  static double getScreenWidth() {
+    return MediaQuery.of(Get.context!).size.width;
   }
 
-  static double getScreenHeight(BuildContext context) {
-    return MediaQuery.of(context).size.height;
+  static double getScreenHeight() {
+    return MediaQuery.of(Get.context!).size.height;
   }
 }
