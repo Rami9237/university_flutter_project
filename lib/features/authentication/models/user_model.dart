@@ -9,6 +9,7 @@ class UserModel {
   final String email;
   String phoneNumber;
   String profilePicture;
+  String role; // New attribute
 
   UserModel({
     required this.id,
@@ -18,6 +19,7 @@ class UserModel {
     required this.email,
     required this.phoneNumber,
     required this.profilePicture,
+    this.role = 'student',
   });
 
   String get fullName => '$firstName $lastName';
@@ -50,7 +52,8 @@ class UserModel {
       'Username': username,
       'Email': email,
       'PhoneNumber': phoneNumber,
-      'ProfilePicture': profilePicture
+      'ProfilePicture': profilePicture,
+      'Role': role,
     };
   }
 
@@ -65,7 +68,9 @@ class UserModel {
           username: data['Username'] ?? '',
           email: data['Email'] ?? '',
           phoneNumber: data['PhoneNumber'] ?? '',
-          profilePicture: data['ProfilePicture'] ?? '');
+          profilePicture: data['ProfilePicture'] ?? '',
+          role: data['Role'] ??
+              'student'); // Set default value if role is not present
     }
     throw {};
   }

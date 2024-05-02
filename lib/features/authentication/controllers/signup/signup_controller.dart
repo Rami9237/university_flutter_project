@@ -54,13 +54,14 @@ class SignupController extends GetxController {
               email.text.trim(), password.text.trim());
 
       final newUser = UserModel(
-          id: userCredential.user!.uid,
-          firstName: firstName.text.trim(),
-          lastName: lastName.text.trim(),
-          username: username.text.trim(),
-          email: email.text.trim(),
-          phoneNumber: phoneNumber.text.trim(),
-          profilePicture: '');
+        id: userCredential.user!.uid,
+        firstName: firstName.text.trim(),
+        lastName: lastName.text.trim(),
+        username: username.text.trim(),
+        email: email.text.trim(),
+        phoneNumber: phoneNumber.text.trim(),
+        profilePicture: '',
+      );
 
       userRepository.saveUserRecord(newUser);
       // Stop loading dialog
@@ -69,7 +70,7 @@ class SignupController extends GetxController {
           title: 'Congrats!',
           message:
               'Your account has been created successfully! Verify your email to continue');
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       // Stop loading dialog in case of error
       TFullScreenLoader.stopLoading();
