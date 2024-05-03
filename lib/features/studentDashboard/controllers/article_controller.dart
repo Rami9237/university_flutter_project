@@ -25,7 +25,7 @@ class ArticleController extends GetxController {
       // Fetch categories subscribed by the user
       final QuerySnapshot<Map<String, dynamic>> userSnapshot = await _firestore
           .collection('CategoriesSubscription')
-          .where('UserID', isEqualTo: userId)
+          .where('userID', isEqualTo: userId)
           .get();
 
       if (userSnapshot.docs.isNotEmpty) {

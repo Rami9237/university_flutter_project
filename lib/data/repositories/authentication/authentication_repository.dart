@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
@@ -40,10 +41,27 @@ class AuthenticationRepository extends GetxController {
   Future<UserCredential> registerWithEmailAndPassword(
       String email, String password) async {
     try {
-      return await _auth.createUserWithEmailAndPassword(
+      final userCredential = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
+
+      // Get the currently signed-in user (assuming this is within a successful registration context)
+      final user = FirebaseAuth.instance.currentUser;
+
+      // Create an empty CategoriesSub array
+      final List<String> categoriesSub = [];
+
+      // Create a new document in the CategoriesSubscription collection with user ID and empty CategoriesSub
+      await FirebaseFirestore.instance
+          .collection('CategoriesSubscription')
+          .doc(user!.uid)
+          .set({
+        'userID': user.uid,
+        'CategoriesSub': categoriesSub,
+      });
+
+      return userCredential;
     } catch (e) {
-      rethrow; // Re-throw the caught exception
+      rethrow;
     }
   }
 

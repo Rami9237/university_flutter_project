@@ -71,7 +71,7 @@ class CategorySelectionController extends GetxController {
       // Reference to the CategoriesSubscription document for the user
       final QuerySnapshot<Map<String, dynamic>> querySnapshot = await _firestore
           .collection('CategoriesSubscription')
-          .where('UserID', isEqualTo: userId)
+          .where('userID', isEqualTo: userId)
           .get();
       final DocumentReference userSubscriptionRef =
           querySnapshot.docs.first.reference;
