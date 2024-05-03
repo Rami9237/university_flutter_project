@@ -19,10 +19,7 @@ class LoginController extends GetxController {
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   @override
-  void onInit() {
-    email.text = localStorage.read("REMEMBER_ME_EMAIL");
-    password.text = localStorage.read("REMEMBER_ME_PASSWORD");
-  }
+  void onInit() {}
 
   Future<void> emailAndPasswordSignIn() async {
     try {
@@ -42,7 +39,7 @@ class LoginController extends GetxController {
       // Save data if remember me is selected
       if (rememberMe.value) {
         localStorage.write('REMEMBER_ME_EMAIL', email.text.trim());
-        localStorage.write('REMEMBER_ME_PASSWORD', email.text.trim());
+        localStorage.write('REMEMBER_ME_PASSWORD', password.text.trim());
       }
 
       final UserCredentials = await AuthenticationRepository.instance
